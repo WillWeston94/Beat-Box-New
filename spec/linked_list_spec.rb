@@ -20,6 +20,7 @@ RSpec.describe LinkedList do
         list = LinkedList.new
 
         list.append("doop")
+
         expect(list.head.data).to eq("doop")
     end
 
@@ -28,6 +29,7 @@ RSpec.describe LinkedList do
 
         list.append("doop")
         list.append("deep")
+
         expect(list.head.next_node.data).to eq("deep")
     end
 
@@ -35,14 +37,134 @@ RSpec.describe LinkedList do
         list = LinkedList.new
 
         list.append("doop")
+
         expect(list.count).to eq(1)
     end
 
-    it "#generates string of elements in the Linked list" do #pass
+    it "#generates string of elements in the Linked list" do # pass
         list = LinkedList.new
 
         list.append("doop")
         list.append("deep")
+
         expect(list.to_string).to eq("doop deep")
     end
+
+    x=it "# prepends nodes to the beginning of the list" do # pass
+        list = LinkedList.new
+
+        
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+
+        expect(list.to_string).to eq("dop plop suu")
+    end
+
+    it "#generates string of elements in the Linked list" do # pass
+        list = LinkedList.new
+
+        
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+
+        expect(list.to_string).to eq("dop plop suu")
+    end
+
+    it "#inserts element at position in list at particular position and prints string" do # pass
+        list = LinkedList.new
+
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        list.insert(1, "woo")
+
+        expect(list.to_string).to eq("dop woo plop suu")
+    end
+
+    it "# prints elements for deep--->blop Iteration 2 Part 2 Line 1" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.to_string).to eq("deep woo shi shu blop")
+    end
+
+    it "# finds position to return and how many elements to return" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.find(2,1)).to eq(["shi"])
+    end
+
+    it "# finds position to return and how many elements to return" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.find(1,3)).to eq(["woo", "shi", "shu"])
+    end
+
+    it "#includes element in Linked list and returns true or false" do
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.includes?("deep")).to be(true)
+    end
+
+    it "#includes element in Linked list and returns true or false" do
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.includes?("dep")).to be(false)
+    end
+
+    it "#pop removes the last element from the list" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        list.pop # removes blop
+        expect(list.to_string).to eq("deep woo shi shu")
+    end
+
+    it "#pop removes the last element from the list" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.pop # removes shu
+        expect(list.to_string).to eq("deep woo shi")
+    end
+
+    
 end
