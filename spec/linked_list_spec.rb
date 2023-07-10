@@ -75,4 +75,37 @@ RSpec.describe LinkedList do
         list.insert(1, "woo")
         expect(list.to_string).to eq ("dop woo plop suu")
     end
+
+    it "# prints elements for deep--->blop Iteration 2 Part 2 Line 1" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        expect(list.to_string).to eq ("deep woo shi shu blop")
+    end
+
+    it "# finds position to return and how many elements to return" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        expect(list.find(2,1)).to eq (["shi"])
+    end
+
+    it "# finds position to return and how many elements to return" do # pass
+        list = LinkedList.new
+
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        expect(list.find(1,3)).to eq (["woo", "shi", "shu"])
+    end
 end
