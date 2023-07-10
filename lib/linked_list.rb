@@ -45,13 +45,26 @@ class LinkedList
         elements.join(' ')
     end
 
-        def prepend(data)
+    def prepend(data)
         if @head.nil?
             @head = Node.new(data)
         else
             current = Node.new(data)
             current.next_node = @head
             @head = current
+        end
+    end
+    
+    def insert(index, data)
+        node = Node.new(data)
+        if index == 0
+            node.next_node = @head
+            @head = node
+        else 
+            current = @head
+            (index - 1).times{current = current.next_node}
+            node.next_node = current.next_node
+            current.next_node = node
         end
     end
 end
