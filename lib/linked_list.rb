@@ -83,4 +83,40 @@ class LinkedList
       
         result
     end
+    
+    def includes?(element)
+        return false if @head.nil?
+      
+        current = @head
+      
+        while current
+          return true if current.data == element
+          current = current.next_node
+        end
+      
+        false
+      end
+      
+      def pop
+        if @head.nil?
+            nil
+        end
+
+        if @head.next_node.nil?
+          pop_data = @head.data
+          @head = nil
+          return pop_data
+        end
+      
+        current = @head
+      
+        while current.next_node && current.next_node.next_node
+          current = current.next_node
+        end
+      
+        pop_data = current.next_node.data
+        current.next_node = nil
+        pop_data
+      end
+      
 end
