@@ -44,4 +44,14 @@ class LinkedList
         end
         elements.join(' ')
     end
+
+        def prepend(data)
+        if @head.nil?
+            @head = Node.new(data)
+        else
+            current = Node.new(data)
+            current.next_node = @head
+            @head = current
+        end
+    end
 end
