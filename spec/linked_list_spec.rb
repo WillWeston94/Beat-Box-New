@@ -38,11 +38,31 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(1)
     end
 
-    it "#generates string of elements in the Linked list" do #pass
+    it "#generates string of elements in the Linked list" do #pry pass
         list = LinkedList.new
 
         list.append("doop")
         list.append("deep")
         expect(list.to_string).to eq("doop deep")
+    end
+
+    # xit "# prepends nodes to the beginning of the list" do #pry pass
+    #     list = LinkedList.new
+
+        
+    #     list.append("plop")
+    #     list.append("suu")
+    #     list.prepend("dop")
+    #     expect(list.head.data).to eq("dop plop suu")
+    # end
+
+    it "#generates string of elements in the Linked list" do #pry pass
+        list = LinkedList.new
+
+        
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.to_string).to eq("dop plop suu")
     end
 end
