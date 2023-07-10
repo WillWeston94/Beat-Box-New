@@ -17,4 +17,11 @@ RSpec.describe BeatBox do
         bb.list
         expect(bb.list.head).to eq(nil)
     end
+
+    it "#splits the appended elements" do
+        bb = BeatBox.new
+
+        bb.append("deep doo ditt")
+        expect(bb.list.to_string).to eq("deep doo ditt")
+    end
 end
