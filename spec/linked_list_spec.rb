@@ -37,7 +37,9 @@ RSpec.describe LinkedList do
         list = LinkedList.new
 
         list.append("doop")
-
+        # test case for 3
+        # list.append("doo") 
+        # list.append("woo")
         expect(list.count).to eq(1)
     end
 
@@ -165,6 +167,8 @@ RSpec.describe LinkedList do
         list.pop # removes shu
         expect(list.to_string).to eq("deep woo shi")
     end
+
 end
+
 
 

@@ -1,31 +1,40 @@
 require "./lib/node"
+# above file is required by our linkedlist class
+
 
 class LinkedList
+    # declares head attribute allowing read and modify
     attr_accessor :head
 
+    # head assigned to nil
+    # represents first node in list
+    # generates empty list
     def initialize
         @head = nil
     end
 
     # append adds new piece of data to the end of the linked list
+    # data parameter represents our value stored in node 
     def append(data)
-
+    # checks if head is nil to indicate if our list is empty
         if @head.nil?
-
+    # if our list is empty to start we create a new node based on data and it becomes our first node aka head 
             @head = Node.new(data, nil)
         else
+    # if list is not empty we cann assume there is a last node so we can hold a reference to our head node to traverse list and find last_node
             last_node = @head
+    # create our loop that iterates until next node is nil returned by our boolean
             while(!last_node.next_node.nil?)
+    # update our last_node variable. Move reference to traverse
                 last_node = last_node.next_node
             end
-
+    # create new node using next_node attribute of line 29 last_node and adds our new data stored inside of our node to the end of our list
             last_node.next_node = Node.new(data, nil)
         end
     end
 
     def count
-         
-        0 if @head
+    # 
         node = @head
         counter = 0
         while node do
