@@ -165,7 +165,6 @@ RSpec.describe LinkedList do
         list.pop # removes shu
         expect(list.to_string).to eq("deep woo shi")
     end
-
-    it "#plays sounds" do #pry pass
-        list
 end
+
+
