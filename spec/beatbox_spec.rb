@@ -28,9 +28,10 @@ RSpec.describe BeatBox do
     it "#plays sounds" do #pry pass 
         bb = BeatBox.new
 
+        bb.append("deep doo ditt woo hoo shu")
         bb.play
 
-        expect(bb.play).to eq()
+        expect(bb.play).to eq(nil)
     end
 
 end

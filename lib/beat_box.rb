@@ -19,10 +19,16 @@ class BeatBox
         @list.count
     end
 
-    
+
     def play
-    beats = "tee dee deep bop boop la na"
-    `say #{beats}`
+        beats = list.head
+
+        while beats
+        beat = beats.data
+        `say #{beat}`
+
+        beats = beats.next_node
+        end
     end
 end
 
