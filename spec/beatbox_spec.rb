@@ -29,8 +29,6 @@ RSpec.describe BeatBox do
         bb = BeatBox.new
 
         bb.append("deep doo ditt woo hoo shu")
-        bb.play
-
         expect(bb.play).to eq(nil)
     end
 
