@@ -6,3 +6,4 @@ This program follows a LinkedList which is connected by a series of Nodes where 
 
 Each Node in the series has a pointer that points to the next Node in the list if applicable.
 IE first node points to second node, second node points to third node that contain our data. After all nodes have been traversed a nil or null address will be pointed to as it signifies the end of the linkedlist.
+
