@@ -19,6 +19,11 @@ class BeatBox
         @list.count
     end
 
+    
+    def play
+    beats = "tee dee deep bop boop la na"
+    `say #{beats}`
+    end
 end
 
 
