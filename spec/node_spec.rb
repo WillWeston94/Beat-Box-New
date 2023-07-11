@@ -13,4 +13,10 @@ RSpec.describe Node do
 
         expect(node.next_node).to eq(nil)
     end
+
+    it"# tail? returns true when next node is nil" do
+        node = Node.new("plop", nil)
+
+        expect(node.tail?).to be(true)
+    end
 end
