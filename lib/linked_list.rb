@@ -33,8 +33,14 @@ class LinkedList
         end
     end
 
+    # count method
+    # initialize node to reference head
+    # counter to keep track set to 0
+    # start loop if node is not nil
+    # line 47 update node variable to next node in our list to traverse
+    # counter increments our nodes traversed
+    # implicit return value of nodes traversed
     def count
-    # 
         node = @head
         counter = 0
         while node do
@@ -44,6 +50,13 @@ class LinkedList
         counter
     end
 
+    # string method
+    # current variable to hold reference for our head
+    # initialize empty array
+    # line 63 loop iterates as long as current is not nil
+    # << operator to append data to array
+    # continue to traverse list with current variable by using our next_node
+    # implicit return our joined data stored in nodes using space limiter '
     def to_string
         current = @head
         elements = []
@@ -54,6 +67,12 @@ class LinkedList
         elements.join(' ')
     end
 
+    # data as our passed parameter to keep consistency 
+    # checks if list is empty
+    # if returned true we create new node using data parameter passed in
+    # line 80 creates our current node if list already exists
+    # have our current node point to previous node
+    # that current node now becomes head node since its added before previous head
     def prepend(data)
         if @head.nil?
             @head = Node.new(data)
@@ -63,6 +82,7 @@ class LinkedList
             @head = current
         end
     end
+    
     
     def insert(index, data)
         node = Node.new(data)
