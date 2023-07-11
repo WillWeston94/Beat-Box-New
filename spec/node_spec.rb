@@ -19,4 +19,5 @@ RSpec.describe Node do
 
         expect(node.tail?).to be(true)
     end
+    
 end

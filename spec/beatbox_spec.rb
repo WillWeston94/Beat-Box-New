@@ -29,8 +29,7 @@ RSpec.describe BeatBox do
         bb = BeatBox.new
 
         bb.append("deep doo ditt woo hoo shu")
-        bb.play
-
+        #bb.play not required or it plays over appended nodes twice
         expect(bb.play).to eq(nil)
     end
 
