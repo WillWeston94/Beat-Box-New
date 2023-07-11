@@ -1,3 +1,3 @@
 # Beat-Box-New
 
-Code housekeeping as project was extremely messy. 
+Housekeeping, as old project repo was messy. 
